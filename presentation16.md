@@ -1,6 +1,6 @@
 
-# Transform Streams
+# Duplex Streams
 
-- a writeable and readable stream that changes the data
-- e.g. compression, crypto
+- a stream that is both readable and writeable
+
 

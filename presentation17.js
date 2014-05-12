@@ -1,9 +1,19 @@
-var through = require('through');
 
-process.stdin.pipe(through(function (buf) {
-    this.push(buf.toString().toUpperCase());
-}, function () {
-    //end
-})).pipe(process.stdout);
+var net = require('net');
+var fs = require('fs');
 
-// (echo 'hello'; sleep 1; echo 'nodejs vienna') | node presentation17.js
+rs = fs.createReadStream('./presentation17.js');
+
+net.createServer(function (socket) {
+    rs.pipe(socket);
+
+    socket.pipe(process.stdout);
+}).listen('/tmp/streams-presentation.sock');
+
+process.on('SIGINT', function () {
+    fs.unlink('/tmp/streams-presentation.sock', function () {});
+    process.exit();
+});
+
+// echo "hello nodejs vienna" | nc -U /tmp/streams-presentation.sock
+//
