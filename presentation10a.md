@@ -1,5 +1,5 @@
 
-#PIPE
+# Pipe
 
 a | b | c | d
 

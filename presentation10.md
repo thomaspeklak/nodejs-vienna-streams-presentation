@@ -1,5 +1,5 @@
 
-# 5 Types of streams
+# 5 Basuc Types of Streams
 
 - Readable
 - Writeable

@@ -6,7 +6,6 @@ rs = fs.createReadStream('./presentation17.js');
 
 net.createServer(function (socket) {
     rs.pipe(socket);
-
     socket.pipe(process.stdout);
 }).listen('/tmp/streams-presentation.sock');
 
@@ -16,4 +15,3 @@ process.on('SIGINT', function () {
 });
 
 // echo "hello nodejs vienna" | nc -U /tmp/streams-presentation.sock
-//

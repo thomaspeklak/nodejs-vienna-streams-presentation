@@ -1,5 +1,5 @@
 
-#References
+# References
 
 - NodeAPI: 
   http://nodejs.org/docs/v0.11.13/api/stream.html
@@ -13,5 +13,6 @@
 - Shoe Playground: 
   https://github.com/thomaspeklak/shoe-playground
 
-
-@thomaspeklak
+# ME
+  @thomaspeklak
+  https://github.com/thomaspeklak

@@ -1,9 +1,9 @@
 
 # Backpressure with pipe
 
-         |           |
-A -----> | B ------> | C
-         |           |
+      <--|        <--|
+A ------>| B ------->| C
+      <--|        <--|
 
 e.g. 
   A http stream
